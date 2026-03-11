@@ -29,6 +29,27 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+    flavorDimensions += "default"
+     productFlavors {
+        create("production") {
+            dimension = "default"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "Setram production")
+           
+        }
+        create("developement") {
+            dimension = "default"
+            
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "Setram developement")
+            applicationIdSuffix = ".dev"
+        }
+    }
+}
 
     buildTypes {
         release {
@@ -37,7 +58,7 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-}
+
 
 flutter {
     source = "../.."

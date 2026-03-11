@@ -1,0 +1,26 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "version":"0.2.0",
+    "configurations:":[
+        {
+            "name": "Setram Development",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "args": [
+                "--flavor","development","--target","lib/main_development.dart",
+        
+            ]
+        },
+        {
+            "name": "Setram Production",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--flavor","production","--target","lib/main_production.dart",
+        
+            ]
+        }
+    ]
+}
